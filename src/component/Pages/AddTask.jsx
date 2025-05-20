@@ -7,9 +7,9 @@ import Swal from 'sweetalert2';
 
 const AddTask = () => {
     const [startDate, setStartDate] = useState(new Date());
-    const {user} = use(AuthContext)
+    const { user } = use(AuthContext)
     console.log(user);
-    
+
 
 
     const handleAddSchedule = (e) => {
@@ -18,31 +18,31 @@ const AddTask = () => {
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         const date = startDate.toLocaleDateString("en-CA");
-        const userData = {date ,...data}
+        const userData = { date, ...data }
         console.log(userData);
 
 
         fetch('http://localhost:3000/task', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(userData)
-                }).then(res => res.json()).then(data => {
-                    if (data.insertedId) {
-                        
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: "Your Task has been saved",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-        
-                        form.reset()
-                    }
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        }).then(res => res.json()).then(data => {
+            if (data.insertedId) {
+
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your Task has been saved",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
+                form.reset()
+            }
         })
-        
+
     };
 
 
@@ -82,8 +82,8 @@ const AddTask = () => {
                                 <option value="Content Writing">Content Writing</option>
                                 <option value="Digital Marketing">Digital Marketing</option>
                                 <option value="Video Editing">Video Editing</option>
-                                {/* <option value="friday">Friday</option>
-                <option value="saturday">Saturday</option> */}
+                                <option value="UI/UX design">UI/UX design</option>
+                                <option value="Internet of Things Solutions">IoT (Internet of Things) Solutions</option>
                             </select>
                         </div>
 
@@ -153,7 +153,7 @@ const AddTask = () => {
                             <input
                                 type="Email"
                                 name="email"
-                                 value={user.email}
+                                value={user.email}
                                 placeholder="Email"
                                 className="input input-bordered w-full"
                                 required

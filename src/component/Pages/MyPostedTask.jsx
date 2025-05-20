@@ -24,7 +24,7 @@ const MyPostedTask = () => {
             
             
             
-            console.log(tasks);
+            // console.log(tasks);
             
 
 

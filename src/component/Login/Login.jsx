@@ -33,39 +33,53 @@ const location = useLocation()
   }
 
 
-  const handleGoogleSignin=()=>{
+  // const handleGoogleSignin=()=>{
 
-    setShowErr('')
-    googleSignin().then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      // const credential = GoogleAuthProvider.credentialFromResult(result);
-      // const token = credential.accessToken;
-      // The signed-in user info.
-      const user = result.user;
-      // console.log(user);
-      setUser(user)
+  //   setShowErr('')
+  //   googleSignin().then((result) => {
+  //     const user = result.user;
+  //     // console.log(user);
+  //     setUser(user)
+  //     // location.reload()
+  //     //  navigate( '/')
+  //     toast.success("User Login Successfully By Google");
+  //   }).catch((error) => {
+  //     // Handle Errors here.
+  //     const errorCode = error.code;
+  //     setShowErr(errorCode);
+  //     const errorMessage = error.message;
 
-      // navigate(location?.state || '/')
-      toast.success("User Login Successfully By Google");
-      
-      // IdP data available using getAdditionalUserInfo(result)
-      // ...
-    }).catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      setShowErr(errorCode);
-      const errorMessage = error.message;
+  //     setShowErr(errorMessage);
+  //     // The email of the user's account used.
+  //     const email = error.customData.email;
+  //     setShowErr(email);
+  //     // The AuthCredential type that was used.
+  //     const credential = GoogleAuthProvider.credentialFromError(error);
+  //     setShowErr(credential);
+  //     // ...
+  //   });
+  // }
 
-      setShowErr(errorMessage);
-      // The email of the user's account used.
-      const email = error.customData.email;
-      setShowErr(email);
-      // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
-      setShowErr(credential);
-      // ...
-    });
-  }
+ const handleGoogleSignin = () => {
+    setShowErr('');
+    googleSignin()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        toast.success('Logged in with Google!');
+        navigate(location?.state?.from?.pathname || '/');
+      })
+      .catch((error) => {
+        const message = error.message || 'Google Sign-In failed';
+        setShowErr(message);
+        toast.error(message);
+      });
+  };
+
+
+
+
+
 
   const handleForget= ()=>{
    

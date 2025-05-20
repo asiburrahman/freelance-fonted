@@ -36,13 +36,13 @@ const PrivetRoutes = ({children}) => {
         return <Navigate state={location.pathname} to="/login"></Navigate>
     }
 
-      if (user && location.pathname=='/register') {
-            return   navigate(location?.state || '/') 
-        }
+    //   if (user && location.pathname=='/register') {
+    //         return   navigate(location?.state || '/') 
+    //     }
 
-        if (user && location.pathname=='/login') {
-            return  navigate(location?.state || '/') 
-         }
+    //     if (user && location.pathname=='/login') {
+    //         return  navigate(location?.state || '/') 
+    //      }
    
 
     // console.log(location.pathname);
