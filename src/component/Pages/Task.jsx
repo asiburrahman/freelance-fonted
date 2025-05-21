@@ -2,10 +2,7 @@ import React from 'react';
 import { FaCheckCircle, FaStar, FaMapMarkerAlt, FaHeart } from "react-icons/fa";
 import { Link } from 'react-router';
 const Task = ({task}) => {
-    // const handleShowDtails=(id)=>{
-    //     console.log(id);
-        
-    // }
+
 
 
     

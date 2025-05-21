@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 // import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
+import Theme from '../ChangeTheme/Theme';
 // import { ToastContainer } from 'react-toastify';
 
 
@@ -77,8 +78,8 @@ const Navbar = () => {
                {
                 user?
                 
-                <div className="navbar  justify-end ">
-      <div className="dropdown dropdown-hover dropdown-end">
+                <div className="navbar  justify-end  space-x-1">
+      <div className="dropdown dropdown-hover dropdown-end ">
         <label tabIndex={0} className="">
           <img  className='w-10 h-10 rounded-full' src={user.photoURL} alt="" />
         </label>
@@ -93,7 +94,10 @@ const Navbar = () => {
             <button onClick={handleSignOut} >Sign Out</button>
           </li>
         </ul>
+
+        
       </div>
+      <Theme></Theme>
     </div>
                 
                 // < div className='flex justify-center items-center gap-2'>
