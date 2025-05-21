@@ -15,7 +15,7 @@ const MyPostedTask = () => {
     useEffect(()=>{
                 
                 // console.log(location);
-               fetch(`http://localhost:3000/task/${user.email}`,{
+               fetch(`https://freelance-backend-eight.vercel.app/task/${user.email}`,{
                 method:"GET"
                }).then(res=> res.json()).then(data=>setTask(data)
                )
@@ -38,7 +38,7 @@ const MyPostedTask = () => {
                             if (result.isConfirmed) {
                 
                                 // start deleting the coffee
-                                fetch(`http://localhost:3000/myTask/${id}`, {
+                                fetch(`https://freelance-backend-eight.vercel.app/myTask/${id}`, {
                                     method: 'DELETE'
                                 })
                                     .then(res => res.json())

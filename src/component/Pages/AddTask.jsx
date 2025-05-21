@@ -22,7 +22,7 @@ const AddTask = () => {
         console.log(userData);
 
 
-        fetch('http://localhost:3000/task', {
+        fetch('https://freelance-backend-eight.vercel.app/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

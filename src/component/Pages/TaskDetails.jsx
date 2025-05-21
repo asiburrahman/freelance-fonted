@@ -24,7 +24,7 @@ const TaskDetails = () => {
 
     const updatedBids = [...bids, user.email];
 
-    fetch(`http://localhost:3000/post/${task._id}`, {
+    fetch(`https://freelance-backend-eight.vercel.app/post/${task._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const TaskDetails = () => {
             }`}
           >
             <FaHeart className={hasBid ? 'text-red-500' : 'text-gray-500'} />
-            {` ${hasBid? `Already Bided, your opportunities ${bids.length}`
+            {` ${hasBid? `Already Bided, Your opportunities ${bids.length}`
               : `You bid for ${bids.length} opportunities` } `}
 
               {/* task.bidsUser?.length? task.bidsUser?.length : 0 */}

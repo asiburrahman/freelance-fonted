@@ -8,7 +8,7 @@ const Task = ({task}) => {
     
 
     return (
-        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg border">
+        <div className=" rounded-xl overflow-hidden shadow-lg border">
       {/* Top image with heart icon */}
       <div className="relative">
         <Link to={`/taskDetail/${task._id}`} className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md hover:bg-red-100">
