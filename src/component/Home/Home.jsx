@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from '../Slider/Slider';
 import { ToastContainer } from 'react-toastify';
 import TrustedCompanies from '../Pages/TrustedCompanies';
@@ -6,8 +6,16 @@ import CountUp from 'react-countup';
 
 
 const Home = () => {
-   
 
+    const [tasks, setTasks] = useState([])
+console.log(tasks);
+
+
+            useEffect(() => {
+  fetch('http://localhost:3000/recentTasks')
+    .then(res => res.json())
+    .then(data => setTasks(data));
+}, []);
     
     return (
         
