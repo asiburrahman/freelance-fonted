@@ -17,6 +17,7 @@ import AddTask from "../component/Pages/AddTask";
 import BrowseTask from "../component/Pages/BrowseTask";
 import MyPostedTask from "../component/Pages/MyPostedTask";
 import TaskDetails from "../component/Pages/TaskDetails";
+import UpdateTask from "../component/Pages/UpdateTask";
   
   const router = createBrowserRouter([
     {
@@ -62,6 +63,11 @@ import TaskDetails from "../component/Pages/TaskDetails";
           element: <PrivetRoutes><MyPostedTask></MyPostedTask></PrivetRoutes>,
           
           
+        },
+         {
+          path:'updateTask/:id',
+          element: <PrivetRoutes><UpdateTask></UpdateTask></PrivetRoutes>,
+          loader: ({params})=> fetch(`http://localhost:3000/taskDetail/${params.id}`)
         },
 
         

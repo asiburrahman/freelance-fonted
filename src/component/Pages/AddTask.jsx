@@ -12,7 +12,7 @@ const AddTask = () => {
 
 
 
-    const handleAddSchedule = (e) => {
+    const handleAddTask = (e) => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
@@ -50,7 +50,7 @@ const AddTask = () => {
         <div>
             <div className=" lg:p-24 ">
                 <h2 className="text-3xl text-center font-bold">Add A Task</h2>
-                <form onSubmit={handleAddSchedule}>
+                <form onSubmit={handleAddTask}>
 
                     <div className="flex flex-col gap-6 w-11/12 mx-auto ">
 

@@ -2,6 +2,7 @@ import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import Loading from '../Loading/Loading';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router';
 
 const MyPostedTask = () => {
     const {user, loading, setLoading} = use(AuthContext)
@@ -59,16 +60,10 @@ const MyPostedTask = () => {
                             }
                         });
 
-
-
-
-
-            //     fetch(`http://localhost:3000/myTask/${id}`,{
-            //     method:"DELETE"
-            //    }).then(res=> res.json()).then(data=>setTask(data) )
+         
             }
+           
             
-            // console.log(tasks);
             
 
 
@@ -117,7 +112,7 @@ const MyPostedTask = () => {
                                 {task.date}
                             </td>
                             <th className='space-x-2'>
-                                <button className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Update</button>
+                                <Link to={`/updateTask/${task._id}`} className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Update</Link>
                                 <button onClick={()=> handleDelete(task._id)} className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Delete</button>
                                 <button  className="btn cursor-not-allowed bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">{task.bidsUser?.length || 0 } Bids</button>
                             </th>
