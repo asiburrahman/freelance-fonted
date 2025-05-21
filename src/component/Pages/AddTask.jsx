@@ -181,7 +181,7 @@ const AddTask = () => {
                     {/* End of Labels */}
                     <input
                         type="submit"
-                        value="Add Schedule"
+                        value="Add Task"
                         className="btn w-full bg-pink-500 text-white mt-6"
                     />
                 </form>

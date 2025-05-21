@@ -9,18 +9,16 @@ const UpdateTask = () => {
 
     const {user} = useContext(AuthContext)
     const loadUser = useLoaderData();
-    console.log(loadUser);
+
+      const [startDate, setStartDate] = useState(new Date(loadUser.date))
     
-    const [startDate, setStartDate] = useState(loadUser.date);
-
-
     const handleUpdateTask= (e)=>{
 
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
-        const date = startDate.toLocaleDateString("en-CA");
+        const date = startDate?.toLocaleDateString("en-CA");
         const userData = { date, ...data }
 
 
@@ -29,7 +27,7 @@ const UpdateTask = () => {
               headers: {
                 'Content-Type': 'application/json'
               },
-              body: JSON.stringify({ userData })
+              body: JSON.stringify( userData )
             })
             .then(res => res.json())
             .then(data => {
@@ -59,7 +57,7 @@ const UpdateTask = () => {
     return (
         
                     <div className=" lg:p-24 ">
-                        <h2 className="text-3xl text-center font-bold">Add A Task</h2>
+                        <h2 className="text-3xl text-center font-bold">Update Your Task</h2>
                         <form onSubmit={handleUpdateTask}>
         
                             <div className="flex flex-col gap-6 w-11/12 mx-auto ">
@@ -122,6 +120,7 @@ const UpdateTask = () => {
                                     <DatePicker
                                         className="input input-bordered w-full"
                                         selected={startDate}
+                                        defaultValue={startDate}
                                         onChange={(date) => setStartDate(date)}
                                     />
                                 </div>
@@ -177,7 +176,7 @@ const UpdateTask = () => {
                             {/* End of Labels */}
                             <input
                                 type="submit"
-                                value="Add Schedule"
+                                value="Update"
                                 className="btn w-full bg-pink-500 text-white mt-6"
                             />
                         </form>
