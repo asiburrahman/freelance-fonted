@@ -48,16 +48,16 @@ const AddTask = () => {
 
     return (
         <div>
-            <div className="bg-[#F4F3F0] lg:p-24">
-                <h2 className="text-3xl text-center font-bold">Add Gym Schedule</h2>
+            <div className=" lg:p-24 ">
+                <h2 className="text-3xl text-center font-bold">Add A Task</h2>
                 <form onSubmit={handleAddSchedule}>
 
-                    <div className="flex flex-col gap-6 ">
+                    <div className="flex flex-col gap-6 w-11/12 mx-auto ">
 
 
 
                         { /* Task Title */}
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 mx-auto">
                             <label className="label">
                                 <span className="label-text font-bold">Title</span>
                             </label>
@@ -71,7 +71,7 @@ const AddTask = () => {
                         </div>
 
                         {/* Category  */}
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 mx-auto">
                             <label className="label">
                                 <span className="label-text font-bold">Category</span>
                             </label>
@@ -88,7 +88,7 @@ const AddTask = () => {
                         </div>
 
                         {/* Description */}
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 mx-auto">
                             <label className="label">
                                 <span className="label-text font-bold">Description</span>
                             </label>
@@ -103,7 +103,7 @@ const AddTask = () => {
 
 
                         {/* Deadline */}
-                        <div className="form-control lg:w-1/2 mt-6 md:mt-0">
+                        <div className="form-control lg:w-1/2 mt-6 md:mt-0 mx-auto">
                             <label className="label font-bold">
                                 <span className="label-text">Deadline</span>
                             </label>
@@ -117,7 +117,7 @@ const AddTask = () => {
 
                         {/* Budget  */}
 
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 mx-auto">
                             <label className="label">
                                 <span className="label-text font-bold">Budget</span>
                             </label>
@@ -131,7 +131,7 @@ const AddTask = () => {
                         </div>
 
                         {/* User Name  */}
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 mx-auto">
                             <label className="label">
                                 <span className="label-text font-bold">User Name</span>
                             </label>
@@ -146,7 +146,7 @@ const AddTask = () => {
                         </div>
 
                         {/* User Name  */}
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 mx-auto">
                             <label className="label">
                                 <span className="label-text font-bold">User Mail</span>
                             </label>
