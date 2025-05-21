@@ -3,6 +3,9 @@ import Slider from '../Slider/Slider';
 import { ToastContainer } from 'react-toastify';
 import TrustedCompanies from '../Pages/TrustedCompanies';
 import CountUp from 'react-countup';
+import Task from '../Pages/Task';
+import TypewriterText from '../Typewriter/TypewriterText';
+import ReactSweper from '../Swiper/ReactSweper';
 
 
 const Home = () => {
@@ -29,16 +32,27 @@ console.log(tasks);
 
             <h2 className="text-2xl lg:text-4xl font-bold py-3 text-center">
     Upcoming Task</h2>
+
+    <TypewriterText></TypewriterText>
+    
     
             <div className='grid justify-items-stretch  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {/* Added Task Soon */}
 
 
-
+              {
+                tasks.map((task, index)=> <Task task={task} key={index}></Task>)
+              }
 
             </div>
 
             <section>
+
+
+              {/* card slider section  */}
+              <section className='p-1 py-10 mt-10'>
+                <ReactSweper></ReactSweper>
+              </section>
             <div className="bg-white py-16 px-6 md:px-12 lg:px-24">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Side - Images */}
