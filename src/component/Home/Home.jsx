@@ -22,7 +22,7 @@ console.log(tasks);
     
     return (
         
-        <div className='w-11/12 mx-auto dark: bg-gray-200'>
+        <div className='w-11/12 mx-auto '>
             <ToastContainer />
 {/* slider section  */}
             <section > 
@@ -32,7 +32,7 @@ console.log(tasks);
 
             </section>
 
-            <section className='p-2 text-center py-10 dark:bg-black'>
+            <section className='p-2 text-center py-10 '>
               <TypewriterText></TypewriterText>
             </section>
            
