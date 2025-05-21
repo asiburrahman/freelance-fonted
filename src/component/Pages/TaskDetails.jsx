@@ -10,6 +10,7 @@ const TaskDetails = () => {
   const [bids, setBids] = useState(task.bidsUser || []);
   const hasBid = bids.includes(user?.email);
 
+  
   const handleBidsCount = () => {
     if (hasBid) {
       return Swal.fire({
@@ -55,8 +56,8 @@ const TaskDetails = () => {
 
   return (
     <div className="dark:text-gray-800 my-10">
-      <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-50">
-        <div className="flex items-center justify-between">
+      <div className="w-11/12 px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-50">
+        <div className=" space-y-2 lg:flex items-center justify-between">
           <span className="text-sm dark:text-gray-600">Date: {task.date}</span>
           <button
             onClick={handleBidsCount}
@@ -65,7 +66,12 @@ const TaskDetails = () => {
             }`}
           >
             <FaHeart className={hasBid ? 'text-red-500' : 'text-gray-500'} />
-            {`You bid for ${task.bidsUser?.length? task.bidsUser?.length : 0 } opportunities`}
+            {` ${hasBid? `Already Bided, your opportunities ${bids.length}`
+              : `You bid for ${bids.length} opportunities` } `}
+
+              {/* task.bidsUser?.length? task.bidsUser?.length : 0 */}
+
+
           </button>
         </div>
 
@@ -79,7 +85,7 @@ const TaskDetails = () => {
           <p className="mt-2">{task.description}</p>
         </div>
 
-        <div className="flex items-center justify-between mt-4">
+        <div className=" sflex items-center justify-between mt-3">
           <p className="text-xl font-bold">Rate: ${task.budget}</p>
           <div className="flex items-center">
             <img

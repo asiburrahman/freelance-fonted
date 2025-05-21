@@ -72,10 +72,10 @@ const MyPostedTask = () => {
                             <td>
                                 {task.date}
                             </td>
-                            <th>
-                                <button className="btn btn-ghost btn-xs">Update</button>
-                                <button className="btn btn-ghost btn-xs">Delete</button>
-                                <button className="btn btn-ghost btn-xs">Bids</button>
+                            <th className='space-x-2'>
+                                <button className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Update</button>
+                                <button className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Delete</button>
+                                <button  className="btn cursor-not-allowed bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">{task.bidsUser?.length || 0 } Bids</button>
                             </th>
                         </tr>)
                         }

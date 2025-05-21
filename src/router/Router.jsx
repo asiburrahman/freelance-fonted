@@ -59,7 +59,8 @@ import TaskDetails from "../component/Pages/TaskDetails";
 
         {
           path: '/myTask',
-          element: <PrivetRoutes><MyPostedTask></MyPostedTask></PrivetRoutes>
+          element: <PrivetRoutes><MyPostedTask></MyPostedTask></PrivetRoutes>,
+          
           
         },
 
