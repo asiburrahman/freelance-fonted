@@ -1,6 +1,7 @@
 import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import Loading from '../Loading/Loading';
+import Swal from 'sweetalert2';
 
 const MyPostedTask = () => {
     const {user, loading, setLoading} = use(AuthContext)
@@ -22,7 +23,50 @@ const MyPostedTask = () => {
             },[user])
 
             
-            
+          const  handleDelete=(id)=>{
+                Swal.fire({
+                            title: "Are you sure?",
+                            text: "You won't be able to revert this!",
+                            icon: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#3085d6",
+                            cancelButtonColor: "#d33",
+                            confirmButtonText: "Yes, delete it!"
+                        }).then((result) => {
+                            console.log(result.isConfirmed)
+                            if (result.isConfirmed) {
+                
+                                // start deleting the coffee
+                                fetch(`http://localhost:3000/myTask/${id}`, {
+                                    method: 'DELETE'
+                                })
+                                    .then(res => res.json())
+                                    .then(data => {
+                                        if (data.deletedCount) {
+                                            Swal.fire({
+                                                title: "Deleted!",
+                                                text: "Your Coffee has been deleted.",
+                                                icon: "success"
+                                            });
+                
+                                            // remove the coffee from the state
+                                            const remainingTasks = tasks.filter(task => task._id !== id);
+                                            setTask(remainingTasks);
+                                        }
+                                    })
+                
+                
+                            }
+                        });
+
+
+
+
+
+            //     fetch(`http://localhost:3000/myTask/${id}`,{
+            //     method:"DELETE"
+            //    }).then(res=> res.json()).then(data=>setTask(data) )
+            }
             
             // console.log(tasks);
             
@@ -74,7 +118,7 @@ const MyPostedTask = () => {
                             </td>
                             <th className='space-x-2'>
                                 <button className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Update</button>
-                                <button className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Delete</button>
+                                <button onClick={()=> handleDelete(task._id)} className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Delete</button>
                                 <button  className="btn cursor-not-allowed bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">{task.bidsUser?.length || 0 } Bids</button>
                             </th>
                         </tr>)
