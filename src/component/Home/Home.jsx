@@ -24,16 +24,25 @@ console.log(tasks);
         
         <div className='w-11/12 mx-auto'>
             <ToastContainer />
-
-            
-            <Slider>
+{/* slider section  */}
+            <section > 
+               <Slider>
             
             </Slider>
 
-            <h2 className="text-2xl lg:text-4xl font-bold py-3 text-center">
-    Upcoming Task</h2>
+            </section>
 
-    <TypewriterText></TypewriterText>
+            <section className='p-2 text-center py-10'>
+              <TypewriterText></TypewriterText>
+            </section>
+           
+
+
+
+            <h2 className="text-2xl lg:text-4xl font-bold py-3 text-center">
+    Bid The Task Soon</h2>
+
+    
     
     
             <div className='grid justify-items-stretch  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -59,7 +68,7 @@ console.log(tasks);
         <div className="relative space-y-4">
           <div className=" rounded-xl overflow-hidden shadow-xl">
             <img
-              src="./5.jpg"
+              src="./Happy.jpg"
               alt="Check-in device"
               className="object-cover w-full h-full"
             />
@@ -67,14 +76,14 @@ console.log(tasks);
           <div className="grid grid-cols-1 lg:flex gap-2 lg:space-x-4">
             <div className="  overflow-hidden shadow-xl flex-1 ">
             <img
-                src="./7.jpg"
+                src="./video.jpg"
                 alt="Event badge pickup"
                 className="object-cover w-full h-full rounded-xl"
               />
             </div>
             <div className="  overflow-hidden shadow-xl flex-1">
               <img
-                src="./6.jpg"
+                src="./web.jpg"
                 alt="Event badge pickup"
                 className="object-cover w-full h-full rounded-xl"
               />
@@ -93,12 +102,12 @@ console.log(tasks);
               <p className="text-gray-600 text-sm">Task managed</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={250000} />+</h3>
-              <p className="text-gray-600 text-sm">registrations processed</p>
+              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={25000} />+</h3>
+              <p className="text-gray-600 text-sm">Registrations processed</p>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={1000} />+</h3>
-              <p className="text-gray-600 text-sm">5-star ratings on G2</p>
+              <p className="text-gray-600 text-sm">5-star ratings</p>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={24} />/ <CountUp duration={10} end={7} /></h3>
