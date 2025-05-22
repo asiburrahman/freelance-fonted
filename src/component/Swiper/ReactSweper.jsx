@@ -85,7 +85,7 @@ const card4 = <>
 
 
     return (
-        <Swiper
+        <Swiper 
              modules={[EffectFade, Autoplay]}
                       // Smooth fade transition
       speed={4000}

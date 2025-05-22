@@ -25,6 +25,13 @@ const Register = () => {
         const password = e.target.password.value
          console.log(name, photoUrl, email, password);
 
+         const userDataInfo = {
+          name,
+          email,
+          photoUrl
+
+         }
+
          setErrorMessage('')
 
          const passwordCheker = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/
@@ -56,8 +63,27 @@ const Register = () => {
               setUser({...userinfo, name, photoUrl})
               console.log(userinfo);
               toast.success("User Create Successful!!");
-              // setUser({...user, displayName: name, photoURL: photoUrl})
-              // console.log(user);
+              
+              // insert into mongodbd database  
+
+              // fetch('https://freelance-backend-eight.vercel.app/user', {
+              //             method: 'POST',
+              //             headers: {
+              //                 'content-type': 'application/json'
+              //             },
+              //             body: JSON.stringify(userDataInfo)
+              //         }).then(res => res.json()).then(data => {
+              //             if (data.insertedId) {
+              
+              //                 console.log(data);
+                              
+              
+                              
+              //             }
+              //         })
+              
+
+
               
               
             }).catch((error) => {

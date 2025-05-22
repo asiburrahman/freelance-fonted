@@ -22,7 +22,7 @@ const Task = ({task}) => {
         <div className="flex items-center space-x-2">
           <img
             className="w-8 h-8 rounded-full object-cover"
-            src="https://randomuser.me/api/portraits/women/44.jpg"
+            src="/images.jpeg"
             alt="Ava Anderson"
           />
           <span className="font-semibold text-gray-900">{task.name}</span>

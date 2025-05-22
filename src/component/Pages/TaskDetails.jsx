@@ -76,12 +76,11 @@ const TaskDetails = () => {
         </div>
 
         <div className="mt-3">
-          <a
-            href="#"
-            className="text-2xl md:text-4xl font-bold hover:underline"
+          <p className="text-2xl md:text-4xl font-bold "
           >
             {task.category}
-          </a>
+          </p>
+          <p className="my-3 text-xl font-medium">{task.title}</p>
           <p className="mt-2">{task.description}</p>
         </div>
 
@@ -89,7 +88,7 @@ const TaskDetails = () => {
           <p className="text-xl font-bold">Rate: ${task.budget}</p>
           <div className="flex items-center">
             <img
-              src="https://source.unsplash.com/50x50/?portrait"
+              src="/images.jpeg"
               alt="avatar"
               className="object-cover w-10 h-10 mx-4 rounded-full dark:bg-gray-500"
             />

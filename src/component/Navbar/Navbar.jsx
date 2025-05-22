@@ -60,7 +60,12 @@ const Navbar = () => {
                   {link}
                 </ul>
                 </div>
-                <Link to='/' className="text-xl font-bold  md:text-2xl lg:text-3xl">FreelanceNation</Link> 
+                <div className='flex items-center justify-center gap-2'>
+                  <img className='w-10 h-10 rounded-full hidden md:inline-block ' src="/images.jpeg" alt="" />
+                  <Link to='/' className="text-md font-bold  md:text-2xl lg:text-3xl">FreelanceNation</Link> 
+                  
+                </div>
+                
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

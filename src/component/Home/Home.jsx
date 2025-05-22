@@ -26,6 +26,7 @@ console.log(tasks);
             <ToastContainer />
 {/* slider section  */}
             <section > 
+
                <Slider>
             
             </Slider>
@@ -59,7 +60,7 @@ console.log(tasks);
 
 
               {/* card slider section  */}
-              <section className='p-1 py-10 mt-10'>
+              <section className='p-1 py-10 mt-10 '>
                 <ReactSweper></ReactSweper>
               </section>
             <div className="bg-white py-16 px-6 md:px-12 lg:px-24">

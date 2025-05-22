@@ -81,11 +81,7 @@ const location = useLocation()
 
 
 
-  const handleForget= ()=>{
-   
-    navigate(`/forgatePassword/${emailRef.current.value}`)
-  }
-
+ 
   if (showErr) {
     toast.error(showErr)
   }
@@ -99,7 +95,7 @@ const location = useLocation()
           <input required type="email" className="input" name='email' ref={emailRef} placeholder="Email" />
           <label className="label">Password</label>
           <input required type="password" className="input" name='password' placeholder="Password" />
-          <div><a onClick={handleForget} className="link link-hover">Forgot password?</a></div>
+          <div><a href='#' className="link link-hover">Forgot password?</a></div>
           <button className="btn btn-neutral mt-4">Login</button>
         </form>
         <div className=' text-md font-bold text-center text-emerald-300'>Login With Google</div>
