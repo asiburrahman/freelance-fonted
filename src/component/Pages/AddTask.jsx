@@ -18,7 +18,8 @@ const AddTask = () => {
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         const date = startDate.toLocaleDateString("en-CA");
-        const userData = { date, ...data }
+        const photoUrl = user.photoURL 
+        const userData = { date, photoUrl, ...data }
         console.log(userData);
 
 

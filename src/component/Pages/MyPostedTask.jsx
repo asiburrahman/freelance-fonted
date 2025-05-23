@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { Link } from 'react-router';
 
 const MyPostedTask = () => {
-    const {user, loading, setLoading} = use(AuthContext)
+    const {user} = use(AuthContext)
     const [tasks, setTask] = useState([])
     
 
