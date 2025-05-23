@@ -61,26 +61,26 @@ const Register = () => {
             updateUserProfile( name, photoUrl ).then(() => {
 
               setUser({...userinfo, name, photoUrl})
-              console.log(userinfo);
+              // console.log(userinfo);
               toast.success("User Create Successful!!");
               
               // insert into mongodbd database  
 
-              // fetch('https://freelance-backend-eight.vercel.app/user', {
-              //             method: 'POST',
-              //             headers: {
-              //                 'content-type': 'application/json'
-              //             },
-              //             body: JSON.stringify(userDataInfo)
-              //         }).then(res => res.json()).then(data => {
-              //             if (data.insertedId) {
+              fetch('https://freelance-backend-eight.vercel.app/user', {
+                          method: 'POST',
+                          headers: {
+                              'content-type': 'application/json'
+                          },
+                          body: JSON.stringify(userDataInfo)
+                      }).then(res => res.json()).then(data => {
+                          // if (data.insertedId) {
               
-              //                 console.log(data);
+                          //     console.log(data);
                               
               
                               
-              //             }
-              //         })
+                          // }
+                      })
               
 
 

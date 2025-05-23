@@ -11,7 +11,7 @@ import ReactSweper from '../Swiper/ReactSweper';
 const Home = () => {
 
     const [tasks, setTasks] = useState([])
-console.log(tasks);
+// console.log(tasks);
 
 
             useEffect(() => {
