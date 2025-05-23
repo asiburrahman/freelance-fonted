@@ -76,7 +76,7 @@ const Navbar = () => {
             <div className="navbar-end">
 
                  {
-                !user && <Link className='hover:bg-gray-200 px-2 p-2 md:px-4  rounded' to="/register">Sign Up </Link>
+                !user && <Link className='hover:bg-gray-400 px-2 p-2 md:px-4  rounded' to="/register">Sign Up </Link>
                }
 
                
@@ -97,7 +97,7 @@ const Navbar = () => {
             <a href="/#">{user.displayName}</a>
           </li>
           <li>
-            <button onClick={handleSignOut} >Sign Out</button>
+            <button  onClick={handleSignOut} >Sign Out</button>
           </li>
         </ul>
 
@@ -112,7 +112,7 @@ const Navbar = () => {
                     /* <img title={user.displayName} className='w-10 h-10 rounded-full' src={user.photoURL} alt="" />
                 <a onClick={handleSignOut} className="btn border-none  ">Sign Out </a>
                 </div>  */
-                 : <Link className='hover:bg-gray-200 p-2 px-2 md:px-4 rounded' to="/login">Login </Link>
+                 : <Link className='hover:bg-gray-400 p-2 px-2 md:px-4 rounded' to="/login">Login </Link>
                  
 
                } 
