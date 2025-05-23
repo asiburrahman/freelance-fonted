@@ -11,7 +11,7 @@ const Task = ({task}) => {
         <div className=" rounded-xl overflow-hidden shadow-lg border">
       {/* Top image with heart icon */}
       <div className="relative">
-        <Link to={`/taskDetail/${task._id}`} className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md hover:bg-red-100">
+        <Link to={`/taskDetail/${task._id}`} className="absolute top-3 right-3  rounded-full p-2 shadow-md hover:bg-gray-500">
           {/* <FaHeart className="text-gray-500" /> */}
           See Details
         </Link>
@@ -25,29 +25,29 @@ const Task = ({task}) => {
             src={task.photoUrl? task.photoUrl : '/images.jpeg'}
             alt="Ava Anderson"
           />
-          <span className="font-semibold text-gray-900">{task.name}</span>
-          <FaCheckCircle className="text-green-500" />
+          <span className="font-semibold ">{task.name}</span>
+          <FaCheckCircle className="" />
         </div>
 
-        <p className="mt-2 text-lg font-semibold text-gray-800">
+        <p className="mt-2 text-lg font-semibold ">
           {task.title}
         </p>
 
         {/* Rating */}
-        <div className="flex items-center text-sm mt-2 text-gray-500">
+        <div className="flex items-center text-sm mt-2 ">
           
         </div>
 
         {/* Deadline */}
-        <div className="flex items-center text-sm text-gray-500 mt-2">
+        <div className="flex items-center text-sm  mt-2">
           
           <span>Deadline: {task.date}</span>
         </div>
 
         {/* Price */}
-        <div className="border-t mt-4 pt-2 text-sm text-gray-500 flex justify-between">
+        <div className="border-t mt-4 pt-2 text-sm  flex justify-between">
           <span>Starting from</span>
-          <span className="font-bold text-black">${task.budget}</span>
+          <span className="font-bold ">${task.budget}</span>
         </div>
       </div>
     </div>

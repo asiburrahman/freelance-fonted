@@ -112,9 +112,9 @@ const MyPostedTask = () => {
                                 {task.date}
                             </td>
                             <th className='space-x-2'>
-                                <Link to={`/updateTask/${task._id}`} className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Update</Link>
-                                <button onClick={()=> handleDelete(task._id)} className="btn  bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">Delete</button>
-                                <button  className="btn cursor-not-allowed bg-amber-700 hover:bg-amber-50 btn-ghost btn-xs">{task.bidsUser?.length || 0 } Bids</button>
+                                <Link to={`/updateTask/${task._id}`} className="btn  bg-amber-700 hover:bg-gray-500 btn-ghost btn-xs">Update</Link>
+                                <button onClick={()=> handleDelete(task._id)} className="btn  bg-amber-700 hover:bg-gray-500 btn-ghost btn-xs">Delete</button>
+                                <button  className="btn cursor-not-allowed bg-amber-700 hover:bg-gray-500 btn-ghost btn-xs">{task.bidsUser?.length || 0 } Bids</button>
                             </th>
                         </tr>)
                         }

@@ -15,14 +15,14 @@ const TrustedCompanies = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 ">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl opacity-60 md:text-3xl font-bold text-center text-pink-400 mb-12">
           Associate <CountUp duration={10} end={36000}/> + Peak Performance Teams
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-2 b md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {logos.map((logo) => (
-            <div key={logo.name} className="bg-base-100  p-4 rounded-xl shadow-sm hover:shadow-lg transition duration-300 ease-in-out">
+            <div key={logo.name} className="bg-gray-100 p-4 rounded-xl shadow-sm hover:shadow-lg transition duration-300 ease-in-out">
               <img
                 src={logo.src}
                 alt={logo.name}

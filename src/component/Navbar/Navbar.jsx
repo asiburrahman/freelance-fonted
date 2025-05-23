@@ -46,7 +46,7 @@ const Navbar = () => {
         <>
         {/* <ToastContainer /> */}
         
-        <div className='bg-gray-100'>
+        <div className=' '>
         
             <div className="navbar   w-11/12 mx-auto">
             <div className="navbar-start ">
@@ -62,7 +62,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center justify-center gap-2'>
                   <img className='w-10 h-10 rounded-full hidden md:inline-block ' src="/images.jpeg" alt="" />
-                  <Link to='/' className="text-md font-bold  md:text-2xl lg:text-3xl">FreelanceNation</Link> 
+                  <Link to='/' className="text-sm font-bold   md:text-2xl lg:text-3xl">FreelanceNation</Link> 
                   
                 </div>
                 
@@ -72,10 +72,11 @@ const Navbar = () => {
                 {link}
                 </ul>
             </div>
+            
             <div className="navbar-end">
 
                  {
-                !user && <Link className='hover:bg-gray-200 p-2 px-4 rounded' to="/register">Sign Up </Link>
+                !user && <Link className='hover:bg-gray-200 px-2 p-2 md:px-4  rounded' to="/register">Sign Up </Link>
                }
 
                
@@ -102,7 +103,7 @@ const Navbar = () => {
 
         
       </div>
-      <Theme></Theme>
+      
     </div>
                 
                 // < div className='flex justify-center items-center gap-2'>
@@ -111,13 +112,14 @@ const Navbar = () => {
                     /* <img title={user.displayName} className='w-10 h-10 rounded-full' src={user.photoURL} alt="" />
                 <a onClick={handleSignOut} className="btn border-none  ">Sign Out </a>
                 </div>  */
-                 : <Link className='hover:bg-gray-200 p-2 px-4 rounded' to="/login">Login </Link>
+                 : <Link className='hover:bg-gray-200 p-2 px-2 md:px-4 rounded' to="/login">Login </Link>
                  
 
                } 
 
               
             </div>
+            <Theme></Theme>
             </div>
         </div>
 

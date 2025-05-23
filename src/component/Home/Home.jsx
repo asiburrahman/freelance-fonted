@@ -63,19 +63,19 @@ const Home = () => {
               <section className='p-1 py-10 mt-10 '>
                 <ReactSweper></ReactSweper>
               </section>
-            <div className="bg-white py-16 px-6 md:px-12 lg:px-24">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className=" py-16 px-6 md:px-12 lg:px-24">
+      <div className="grid lg:grid-cols-2 gap-12 items-center shadow-2xl rounded-xl p-1">
         {/* Left Side - Images */}
-        <div className="relative space-y-4">
-          <div className=" rounded-xl overflow-hidden shadow-xl">
+        <div className="relative space-y-4 rounded-2xl">
+          <div className=" rounded-xl overflow-hidden shadow-xl ">
             <img
               src="./Happy.jpg"
               alt="Check-in device"
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="grid grid-cols-1 lg:flex gap-2 lg:space-x-4">
-            <div className="  overflow-hidden shadow-xl flex-1 ">
+          <div className="grid grid-cols-1 lg:flex gap-2 lg:space-x-4 rounded-xl">
+            <div className="  overflow-hidden shadow-xl flex-1 rounded-xl ">
             <img
                 src="./video.jpg"
                 alt="Event badge pickup"
@@ -94,25 +94,25 @@ const Home = () => {
 
         {/* Right Side - Text Content */}
         <div className="space-y-8">
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-2xl md:text-4xl font-bold  leading-tight">
             Your all-in-one solution for every Task
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={7000} />+</h3>
-              <p className="text-gray-600 text-sm">Task managed</p>
+              <h3 className="text-2xl font-semibold "><CountUp duration={10} end={7000} />+</h3>
+              <p className=" text-sm">Task managed</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={25000} />+</h3>
-              <p className="text-gray-600 text-sm">Registrations processed</p>
+              <h3 className="text-2xl font-semibold "><CountUp duration={10} end={25000} />+</h3>
+              <p className=" text-sm">Registrations processed</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={1000} />+</h3>
-              <p className="text-gray-600 text-sm">5-star ratings</p>
+              <h3 className="text-2xl font-semibold "><CountUp duration={10} end={1000} />+</h3>
+              <p className=" text-sm">5-star ratings</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={24} />/ <CountUp duration={10} end={7} /></h3>
-              <p className="text-gray-600 text-sm">customer support</p>
+              <h3 className="text-2xl font-semibold "><CountUp duration={10} end={24} />/ <CountUp duration={10} end={7} /></h3>
+              <p className=" text-sm">customer support</p>
             </div>
           </div>
         </div>

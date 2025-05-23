@@ -8,8 +8,8 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return (
-                <footer className="dark:bg-gray-100 dark:text-gray-900 mt-20">
-            <div className=" flex flex-col   px-4 py-8 lg:flex-row dark:divide-gray-600 w-11/12 mx-auto">
+                <footer className=" border-t border-gray-400 border-dashed  mt-20 shadow-xl">
+            <div className=" flex flex-col   px-4 py-8 lg:flex-row  w-11/12 mx-auto">
                 <ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
                     <li>Shop</li>
                     <li>About</li>
@@ -58,17 +58,17 @@ const Footer = () => {
             <section className='pb-4'>
 
             <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-        <p className="text-sm text-gray-400">
+        <p className="text-sm ">
           &copy; {new Date().getFullYear()} FreelanceNation. All rights reserved By Asibur Rahman.
         </p>
         <div className="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" className="text-gray-400 hover:text-white text-sm">
+          <a href="#" className=" hover:text-white text-sm">
             Privacy Policy
           </a>
-          <a href="#" className="text-gray-400 hover:text-white text-sm">
+          <a href="#" className=" hover:text-white text-sm">
             Terms of Service
           </a>
-          <a href="#" className="text-gray-400 hover:text-white text-sm">
+          <a href="#" className=" hover:text-white text-sm">
             Contact
           </a>
         </div>

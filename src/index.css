@@ -1,9 +1,18 @@
+
+
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
+
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: all;
+}
+
 
 .active{
     text-decoration: underline;
