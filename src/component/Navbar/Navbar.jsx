@@ -61,7 +61,7 @@ const Navbar = () => {
                 </ul>
                 </div>
                 <div className='flex items-center justify-center gap-2'>
-                  <img className='w-10 h-10 rounded-full hidden md:inline-block ' src="/images.jpeg" alt="" />
+                  <img src={user.photoURL} className='w-10 h-10 rounded-full hidden md:inline-block '  alt="" />
                   <Link to='/' className="text-sm font-bold   md:text-2xl lg:text-3xl">FreelanceNation</Link> 
                   
                 </div>
