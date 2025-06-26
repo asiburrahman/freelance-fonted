@@ -36,17 +36,18 @@ const Navbar = () => {
                   <li><NavLink to='/register'>Register</NavLink></li></>} */}
                   <li><NavLink to='/browseTask'>Browse Task</NavLink></li>
                   {user && <>
-                             
-                             <li><NavLink to='/addTask'>Add Task</NavLink></li>
-                             <li><NavLink to='/myTask'>My Posted Task</NavLink></li>
+                             <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                           
                         </>
                   }
+                  <li><NavLink to='/aboutUs'>About Us</NavLink></li>
+                  <li><NavLink to='/contact'>About Us</NavLink></li>
                 </>
     return (
         <>
         {/* <ToastContainer /> */}
         
-        <div className=' '>
+        <div className='bg-base-300  '>
         
             <div className="navbar   w-11/12 mx-auto">
             <div className="navbar-start ">
@@ -61,7 +62,7 @@ const Navbar = () => {
                 </ul>
                 </div>
                 <div className='flex items-center justify-center gap-2'>
-                  <img src={user.photoURL} className='w-10 h-10 rounded-full hidden md:inline-block '  alt="" />
+                  <img src="/images.jpeg" className='w-10 h-10 rounded-full hidden md:inline-block '  alt="" />
                   <Link to='/' className="text-sm font-bold   md:text-2xl lg:text-3xl">FreelanceNation</Link> 
                   
                 </div>
@@ -87,14 +88,14 @@ const Navbar = () => {
                 <div className="navbar  justify-end  space-x-1">
       <div className="dropdown dropdown-hover dropdown-end ">
         <label tabIndex={0} className="">
-          <img  className='w-10 h-10 rounded-full' src={user.photoURL} alt="" />
+          <img  className='w-10 h-10 rounded-full' src={user?.photoURL} alt="" />
         </label>
         <ul
           tabIndex={0}
           className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40"
         >
           <li>
-            <a href="/#">{user.displayName}</a>
+            <a href="/#">{user?.displayName}</a>
           </li>
           <li>
             <button  onClick={handleSignOut} >Sign Out</button>

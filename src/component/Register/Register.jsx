@@ -66,7 +66,7 @@ const Register = () => {
               
               // insert into mongodbd database  
 
-              fetch('https://freelance-backend-eight.vercel.app/user', {
+              fetch('http://localhost:3000/user', {
                           method: 'POST',
                           headers: {
                               'content-type': 'application/json'

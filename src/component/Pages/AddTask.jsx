@@ -23,7 +23,7 @@ const AddTask = () => {
         console.log(userData);
 
 
-        fetch('https://freelance-backend-eight.vercel.app/task', {
+        fetch('http://localhost:3000/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -183,7 +183,7 @@ const AddTask = () => {
                     <input
                         type="submit"
                         value="Add Task"
-                        className="btn w-full bg-pink-500 text-white mt-6"
+                        className="btn w-full  btn-sm bg-blue-500 hover:bg-blue-600 text-white mt-6"
                     />
                 </form>
             </div>

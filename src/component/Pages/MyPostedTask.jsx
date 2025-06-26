@@ -15,7 +15,7 @@ const MyPostedTask = () => {
     useEffect(()=>{
                 
                 // console.log(location);
-               fetch(`https://freelance-backend-eight.vercel.app/task/${user.email}`,{
+               fetch(`http://localhost:3000/task/${user.email}`,{
                 method:"GET"
                }).then(res=> res.json()).then(data=>setTask(data)
                )
@@ -38,7 +38,7 @@ const MyPostedTask = () => {
                             if (result.isConfirmed) {
                 
                                 // start deleting the coffee
-                                fetch(`https://freelance-backend-eight.vercel.app/myTask/${id}`, {
+                                fetch(`http://localhost:3000/myTask/${id}`, {
                                     method: 'DELETE'
                                 })
                                     .then(res => res.json())
@@ -112,9 +112,9 @@ const MyPostedTask = () => {
                                 {task.date}
                             </td>
                             <th className='space-x-2'>
-                                <Link to={`/updateTask/${task._id}`} className="btn  bg-amber-700 hover:bg-gray-500 btn-ghost btn-xs">Update</Link>
-                                <button onClick={()=> handleDelete(task._id)} className="btn  bg-amber-700 hover:bg-gray-500 btn-ghost btn-xs">Delete</button>
-                                <button  className="btn cursor-not-allowed bg-amber-700 hover:bg-gray-500 btn-ghost btn-xs">{task.bidsUser?.length || 0 } Bids</button>
+                                <Link to={`/dashboard/updateTask/${task._id}`} className="btn  btn-sm bg-blue-500 hover:bg-blue-600 text-white btn-xs">Update</Link>
+                                <button onClick={()=> handleDelete(task._id)} className="btn btn-sm bg-blue-500 hover:bg-blue-600 text-white btn-xs">Delete</button>
+                                <button  className="btn cursor-not-allowed  btn-sm bg-blue-500 hover:bg-blue-600 text-white btn-xs">{task.bidsUser?.length || 0 } Bids</button>
                             </th>
                         </tr>)
                         }

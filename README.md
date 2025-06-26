@@ -2,7 +2,7 @@
 
 A modern freelance task management platform built with React, Firebase, MongoDB, and Express.js, styled using Tailwind CSS and DaisyUI — designed to help users post, manage, and bid on freelance projects efficiently.
 
-🌍 Live Demo: FreelanceNation Live Site
+🌍 Live Demo: [FreelanceNation Live Site](https://react-password-auth.web.app/)
 
 🚀 Project Overview
 

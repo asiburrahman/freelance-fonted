@@ -24,7 +24,7 @@ const TaskDetails = () => {
 
     const updatedBids = [...bids, user.email];
 
-    fetch(`https://freelance-backend-eight.vercel.app/post/${task._id}`, {
+    fetch(`http://localhost:3000/post/${task._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -88,7 +88,7 @@ const TaskDetails = () => {
           <p className="text-xl font-bold">Rate: ${task.budget}</p>
           <div className="flex items-center">
             <img
-              src="/images.jpeg"
+              src={task.photoUrl}
               alt="avatar"
               className="object-cover w-10 h-10 mx-4 rounded-full dark:bg-gray-500"
             />

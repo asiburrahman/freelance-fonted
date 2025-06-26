@@ -6,6 +6,7 @@ import CountUp from 'react-countup';
 import Task from '../Pages/Task';
 import TypewriterText from '../Typewriter/TypewriterText';
 import ReactSweper from '../Swiper/ReactSweper';
+import Review from '../Pages/Review';
 
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
 
 
             useEffect(() => {
-  fetch('https://freelance-backend-eight.vercel.app/recentTasks')
+  fetch('http://localhost:3000/recentTasks')
     .then(res => res.json())
     .then(data => setTasks(data));
 }, []);
@@ -46,7 +47,7 @@ const Home = () => {
     
     
     
-            <div className='grid justify-items-stretch  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='grid justify-items-stretch  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                 {/* Added Task Soon */}
 
 
@@ -64,7 +65,7 @@ const Home = () => {
                 <ReactSweper></ReactSweper>
               </section>
             <div className=" py-16 px-6 md:px-12 lg:px-24">
-      <div className="grid lg:grid-cols-2 gap-12 items-center shadow-2xl rounded-xl p-1">
+      <div className="grid bg-base-300  lg:grid-cols-2 gap-12 items-center shadow-2xl rounded-xl p-1">
         {/* Left Side - Images */}
         <div className="relative space-y-4 rounded-2xl">
           <div className=" rounded-xl overflow-hidden shadow-xl ">
@@ -118,6 +119,9 @@ const Home = () => {
         </div>
       </div>
     </div>
+            </section>
+            <section>
+              <Review></Review>
             </section>
 
 

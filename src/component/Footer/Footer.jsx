@@ -8,14 +8,19 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return (
-                <footer className=" border-t border-gray-400 border-dashed  mt-20 shadow-xl">
+                <footer className=" border-t bg-base-300 border-gray-400 border-dashed p-4 mt-20 shadow-xl">
+                    <div className=' gap-2 flex items-center px-2 justify-center lg:justify-start md:justify-start'>
+                                      <img src="/images.jpeg" className='w-10 h-10 rounded-full hidden md:inline-block '  alt="" />
+                                      <Link to='/' className="text-sm font-bold   md:text-2xl lg:text-3xl">FreelanceNation</Link> 
+                                      
+                                    </div>
             <div className=" flex flex-col   px-4 py-8 lg:flex-row  w-11/12 mx-auto">
                 <ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
-                    <li>Shop</li>
-                    <li>About</li>
-                    <li>Blog</li>
-                    <li>Pricing</li>
-                    <li>Contact</li>
+                   <li><Link to='/'>Home</Link> </li>
+                   <li><Link to='/browseTask'>ALL Task</Link> </li>
+                   <li><Link to='/aboutUs'>About Us</Link> </li>
+                   <li><Link to='/contact'>Contact</Link> </li>
+                
                 </ul>
                 <div className="flex flex-col justify-center pt-6 lg:pt-0">
                     {/* <div className="flex justify-center space-x-4">
@@ -68,7 +73,7 @@ const Footer = () => {
           <a href="#" className=" hover:text-white text-sm">
             Terms of Service
           </a>
-          <a href="#" className=" hover:text-white text-sm">
+          <a href="/contact" className=" hover:text-white text-sm">
             Contact
           </a>
         </div>

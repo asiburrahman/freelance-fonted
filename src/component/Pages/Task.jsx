@@ -8,14 +8,9 @@ const Task = ({task}) => {
     
 
     return (
-        <div className=" rounded-xl overflow-hidden shadow-lg border">
+        <div className=" bg-base-300 rounded-xl overflow-hidden shadow-lg border">
       {/* Top image with heart icon */}
-      <div className="relative">
-        <Link to={`/taskDetail/${task._id}`} className="absolute top-3 right-3  rounded-full p-2 shadow-md hover:bg-gray-500">
-          {/* <FaHeart className="text-gray-500" /> */}
-          See Details
-        </Link>
-      </div>
+      
 
       {/* Freelancer info */}
       <div className="p-4">
@@ -25,7 +20,7 @@ const Task = ({task}) => {
             src={task.photoUrl? task.photoUrl : '/images.jpeg'}
             alt="Ava Anderson"
           />
-          <span className="font-semibold ">{task.name}</span>
+          <span className="font-semibold  ">{task.name}</span>
           <FaCheckCircle className="" />
         </div>
 
@@ -49,7 +44,15 @@ const Task = ({task}) => {
           <span>Starting from</span>
           <span className="font-bold ">${task.budget}</span>
         </div>
+        
+        <div className=" py-4 w-full">
+        <Link to={`/taskDetail/${task._id}`} className="inline-block w-full text-center bg-base-100 py-2 font-medium rounded-full  shadow-md hover:bg-gray-300">
+          {/* <FaHeart className="text-gray-500" /> */}
+          See Details
+        </Link>
       </div>
+      </div>
+      
     </div>
     );
 };

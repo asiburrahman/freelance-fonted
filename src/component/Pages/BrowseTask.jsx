@@ -9,7 +9,7 @@ const BrowseTask = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-2 my-7'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-11/12 mx-auto gap-2 my-7'>
                 {
                     tasks.map((task, index) => <Task task={task} key={index}></Task>)
                 }

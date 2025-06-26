@@ -22,7 +22,7 @@ const UpdateTask = () => {
         const userData = { date, ...data }
 
 
-        fetch(`https://freelance-backend-eight.vercel.app/UpdateTask/${loadUser._id}`, {
+        fetch(`http://localhost:3000/UpdateTask/${loadUser._id}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json'
@@ -177,7 +177,7 @@ const UpdateTask = () => {
                             <input
                                 type="submit"
                                 value="Update"
-                                className="btn w-full bg-pink-500 text-white mt-6"
+                                className="btn w-full btn-sm bg-blue-500 hover:bg-blue-600 text-white mt-6"
                             />
                         </form>
                         
