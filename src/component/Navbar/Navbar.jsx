@@ -47,7 +47,7 @@ const Navbar = () => {
         <>
         {/* <ToastContainer /> */}
         
-        <div className='bg-base-300  '>
+        <div className='bg-base-300  font-semibold'>
         
             <div className="navbar   w-11/12 mx-auto">
             <div className="navbar-start ">
