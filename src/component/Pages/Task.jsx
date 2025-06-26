@@ -25,7 +25,7 @@ const Task = ({task}) => {
         </div>
 
         <p className="mt-2 text-lg font-semibold ">
-          {task.title}
+          {task.category}
         </p>
 
         {/* Rating */}
