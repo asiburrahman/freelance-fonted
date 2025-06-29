@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       {
         path: '/browseTask',
         Component: BrowseTask,
-        loader: () => fetch('http://localhost:3000/task')
+        loader: () => fetch('https://freelance-backend-eight.vercel.app/task')
       },
 
        {
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
       {
         path: 'taskDetail/:id',
         element: <PrivetRoutes><TaskDetails></TaskDetails></PrivetRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:3000/taskDetail/${params.id}`)
+        loader: ({ params }) => fetch(`https://freelance-backend-eight.vercel.app/taskDetail/${params.id}`)
       },
 
      
@@ -93,7 +93,7 @@ const router = createBrowserRouter([
           {
         path: '/dashboard/browseTask',
         Component: TaskTable,
-        loader: () => fetch('http://localhost:3000/task')
+        loader: () => fetch('https://freelance-backend-eight.vercel.app/task')
       },
 
        {
@@ -105,7 +105,7 @@ const router = createBrowserRouter([
        {
         path: '/dashboard/updateTask/:id',
         element: <PrivetRoutes><UpdateTask></UpdateTask></PrivetRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:3000/taskDetail/${params.id}`)
+        loader: ({ params }) => fetch(`https://freelance-backend-eight.vercel.app/taskDetail/${params.id}`)
       },
 
     ]

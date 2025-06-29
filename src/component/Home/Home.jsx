@@ -16,7 +16,7 @@ const Home = () => {
 
 
             useEffect(() => {
-  fetch('http://localhost:3000/recentTasks')
+  fetch('https://freelance-backend-eight.vercel.app/recentTasks')
     .then(res => res.json())
     .then(data => setTasks(data));
 }, []);

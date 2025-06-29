@@ -22,7 +22,7 @@ const UpdateTask = () => {
         const userData = { date, ...data }
 
 
-        fetch(`http://localhost:3000/UpdateTask/${loadUser._id}`, {
+        fetch(`https://freelance-backend-eight.vercel.app/UpdateTask/${loadUser._id}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json'

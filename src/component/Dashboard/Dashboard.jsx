@@ -11,12 +11,12 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Fetch all tasks
-    fetch('http://localhost:3000/task')
+    fetch('https://freelance-backend-eight.vercel.app/task')
       .then(res => res.json())
       .then(data => setAllTasks(data));
 
     // Fetch tasks for logged-in user
-    fetch(`http://localhost:3000/task/${user?.email}`)
+    fetch(`https://freelance-backend-eight.vercel.app/task/${user?.email}`)
       .then(res => res.json())
       .then(data => setMyTasks(data));
   }, [user]);

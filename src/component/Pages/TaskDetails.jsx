@@ -24,7 +24,7 @@ const TaskDetails = () => {
 
     const updatedBids = [...bids, user.email];
 
-    fetch(`http://localhost:3000/post/${task._id}`, {
+    fetch(`https://freelance-backend-eight.vercel.app/post/${task._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
